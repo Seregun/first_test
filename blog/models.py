@@ -1,7 +1,7 @@
 from django.db import models
 
 class Category(models.Model):
-    name = models.CharField(max_length = 70)
+    name = models.CharField(max_length=70)
 
     class Meta:
         verbose_name = 'Категорія'
@@ -20,10 +20,10 @@ class Post(models.Model):
     categories = models.ManyToManyField(Category, blank=True)
 
 
-    class Meta:
+class Meta:
         verbose_name = 'Публікацію'
         verbose_name_plural = 'Публікації'
 
-    def __str__(self):
+def __str__(self):
         return '{} / {:%Y-%m-%d %H:%M:%S}'.format(self.title,
                                                   self.created_at)
