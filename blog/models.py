@@ -21,7 +21,7 @@ class Post(models.Model):
 
 
 class Meta:
-        verbose_name = 'Публікацію'
+        verbose_name = 'Публікація'
         verbose_name_plural = 'Публікації'
 
 def __str__(self):
